@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TestBRQ</name>
+    </assembly>
+    <members>
+        <member name="M:TestBRQ.Controllers.DadosPessoaisController.Get">
+            <summary>
+            Listar todos Dados Pessoais
+            </summary>
+        </member>
+        <member name="M:TestBRQ.Controllers.EnderecoController.Get">
+            <summary>
+            Lista todos Enderecos
+            </summary>
+        </member>
+    </members>
+</doc>

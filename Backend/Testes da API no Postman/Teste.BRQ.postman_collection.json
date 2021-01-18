@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "0dab7ec0-4ed2-4c68-bc50-959f1fad3c13",
+		"name": "Teste.BRQ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar_Endereços",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/Endereco",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"Endereco"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar_DadosPessoais",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/DadosPessoais",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"DadosPessoais"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar_Endereço",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cep\": \"12214111\",\r\n    \"endereco1\": \"Avenida Dos Bobos\",\r\n    \"cidade\": \"Bobob dos Campos\",\r\n    \"estado\": \"Bobo São Paulo\",\r\n    \"numero\": \"157\",\r\n    \"complemento\": \"Em frete a bobolandia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/Endereco",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"Endereco"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar_Dados Pessoais",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Henrique\",\r\n    \"sobrenome\": \"Barreiro\",\r\n    \"cpf\": \"12345678910\",\r\n    \"dataNascimento\": \"2001-12-07T00:00:00\",\r\n    \"idEndereco\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/DadosPessoais",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"DadosPessoais"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
