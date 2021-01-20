@@ -20,14 +20,25 @@
 }
 
 .cadastro{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 0;
-    border: 1px solid #C4C4C4;
-    border-radius: 12px;
-    margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 450px;
+  padding: 15px 15px;
+  border: 3px solid dodgerblue;
+  border-radius: 12px;
+  margin: 10px 10px;
+  background-color: rgba(255, 140, 0, 0.672);
 }
+.CadastroGeral{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items:flex-start;
+}
+
 .cadastro input{
   margin: 5px;
 }

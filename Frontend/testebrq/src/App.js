@@ -83,6 +83,7 @@ function App() {
 
   return (
     <div className="App">
+	<div className="CadastroGeral">
       <div className="cadastro">
         <h1>Cadastre seu Endereço</h1>
         <label>Cep</label>
@@ -125,6 +126,7 @@ function App() {
 
         <button onClick={() => requestApiPostData()}>Cadastrar</button>
 
+      </div>
       </div>
 
 
