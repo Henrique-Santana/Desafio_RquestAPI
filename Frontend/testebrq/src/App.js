@@ -83,70 +83,70 @@ function App() {
 
   return (
     <div className="App">
-	<div className="CadastroGeral">
-      <div className="cadastro">
-        <h1>Cadastre seu Endereço</h1>
-        <label>Cep</label>
-        <input type={"text"} onChange={(event) => setCep(event.target.value)} />
+      <div className="CadastroGeral">
+        <div className="cadastro">
+          <h1>Cadastre seu Endereço</h1>
+          <label>Cep</label>
+          <input type={"text"} onChange={(event) => setCep(event.target.value)} />
 
-        <label>Endereco</label>
-        <input type={"text"} onChange={(event) => setEndereco(event.target.value)} />
+          <label>Endereco</label>
+          <input type={"text"} onChange={(event) => setEndereco(event.target.value)} />
 
-        <label>Estado</label>
-        <input type={"text"} onChange={(event) => setEstado(event.target.value)} />
+          <label>Estado</label>
+          <input type={"text"} onChange={(event) => setEstado(event.target.value)} />
 
-        <label>Cidade</label>
-        <input type={"text"} onChange={(event) => setCidade(event.target.value)} />
+          <label>Cidade</label>
+          <input type={"text"} onChange={(event) => setCidade(event.target.value)} />
 
-        <label>numero</label>
-        <input type={"text"} onChange={(event) => setNumero(event.target.value)} />
+          <label>numero</label>
+          <input type={"text"} onChange={(event) => setNumero(event.target.value)} />
 
-        <label>complemento</label>
-        <input type={"text"} onChange={(event) => setComplemento(event.target.value)} />
+          <label>complemento</label>
+          <input type={"text"} onChange={(event) => setComplemento(event.target.value)} />
 
-        <button onClick={() => requestApiPostAdrress()}>Cadastrar</button>
-      </div>
+          <button onClick={() => requestApiPostAdrress()}>Cadastrar</button>
+        </div>
 
-      <div className="cadastro">
-        <h1>Cadastre seus Dados DadosPessoais</h1>
-        <label>Nome</label>
-        <input type="text" onChange={(event) => setNome(event.target.value)} />
+        <div className="cadastro">
+          <h1>Cadastre seus Dados DadosPessoais</h1>
+          <label>Nome</label>
+          <input type="text" onChange={(event) => setNome(event.target.value)} />
 
-        <label>Sobrenome</label>
-        <input type="text" onChange={(event) => setSobrenome(event.target.value)} />
+          <label>Sobrenome</label>
+          <input type="text" onChange={(event) => setSobrenome(event.target.value)} />
 
-        <label>Cpf</label>
-        <input type="text" onChange={(event) => setCpf(event.target.value)} />
+          <label>Cpf</label>
+          <input type="text" onChange={(event) => setCpf(event.target.value)} />
 
-        <label>Data Nascimento</label>
-        <input type="date" onChange={(event) => setDataNascimento(event.target.value)} />
+          <label>Data Nascimento</label>
+          <input type="date" onChange={(event) => setDataNascimento(event.target.value)} />
 
-        <label>Id do Seu Endereço</label>
-        <input type="text" onChange={(event) => setIdEndereco(event.target.value)} />
+          <label>Id do Seu Endereço</label>
+          <input type="text" onChange={(event) => setIdEndereco(event.target.value)} />
 
-        <button onClick={() => requestApiPostData()}>Cadastrar</button>
+          <button onClick={() => requestApiPostData()}>Cadastrar</button>
 
-      </div>
+        </div>
       </div>
 
 
       <div className="Tabelas">
-      <h1>DadosPessoais</h1>
+        <h1>DadosPessoais</h1>
         <div className="table">
           {
             dadosPessoais && dadosPessoais.map((e, i) => {
               return (
                 <div key={i} className="tabela">
-                  <tr><b>Nome: </b> {e.nome}</tr>
-                  <tr><b>Sobrenome: </b> {e.sobrenome}</tr>
-                  <tr><b>Cpf: </b> {e.cpf}</tr>
-                  <tr><b>Data de Nascimento: </b> {formatarData(e.dataNascimento)}</tr>
-                  <tr><b>Cep: </b> {e.idEnderecoNavigation.cep}</tr>
-                  <tr><b>Endereço: </b> {e.idEnderecoNavigation.endereco1}</tr>
-                  <tr><b>Numero: </b> {e.idEnderecoNavigation.numero}</tr>
-                  <tr><b>Cidade: </b> {e.idEnderecoNavigation.cidade}</tr>
-                  <tr><b>Estado: </b> {e.idEnderecoNavigation.estado}</tr>
-                  <tr><b>Complemento: </b> {e.idEnderecoNavigation.complemento}</tr>
+                  <p><b>Nome: </b>{e.nome}</p>
+                  <p><b>Sobrenome: </b>{e.sobrenome}</p>
+                  <p><b>Cpf: </b>{e.cpf}</p>
+                  <p><b>Data de Nascimento: </b>{formatarData(e.dataNascimento)}</p>
+                  <p><b>Cep: </b>{e.idEnderecoNavigation.cep}</p>
+                  <p><b>Endereço: </b>{e.idEnderecoNavigation.endereco1}</p>
+                  <p><b>Numero: </b>{e.idEnderecoNavigation.numero}</p>
+                  <p><b>Cidade: </b>{e.idEnderecoNavigation.cidade}</p>
+                  <p><b>Estado: </b>{e.idEnderecoNavigation.estado}</p>
+                  <p><b>Complemento: </b>{e.idEnderecoNavigation.complemento}</p>
                 </div>
               )
             })
@@ -158,13 +158,13 @@ function App() {
             enderecos && enderecos.map((e, i) => {
               return (
                 <div key={i} className="tabela">
-                  <tr><b>IdEndereço: </b> {e.idEndereco}</tr>
-                  <tr><b>Cep: </b> {e.cep}</tr>
-                  <tr><b>Endereço: </b> {e.endereco1}</tr>
-                  <tr><b>Numero: </b> {e.numero}</tr>
-                  <tr><b>Cidade: </b> {e.cidade}</tr>
-                  <tr><b>Estado: </b> {e.estado}</tr>
-                  <tr><b>Complemento: </b> {e.complemento}</tr>
+                  <p><b>IdEndereço: </b>{e.idEndereco}</p>
+                  <p><b>Cep: </b>{e.cep}</p>
+                  <p><b>Endereço: </b>{e.endereco1}</p>
+                  <p><b>Numero: </b>{e.numero}</p>
+                  <p><b>Cidade: </b>{e.cidade}</p>
+                  <p><b>Estado: </b>{e.estado}</p>
+                  <p><b>Complemento: </b>{e.complemento}</p>
                 </div>
               )
             })

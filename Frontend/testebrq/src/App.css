@@ -3,20 +3,45 @@
   flex-direction: column;
 }
 
+
+/* ----Tabela---- */
 .tabela{
+  background-color:rgba(255, 140, 0, 0.672);
   width: 30%;
   padding: 10px 10px;
-  border: 1px solid #C4C4C4;
+  border: 3px solid dodgerblue;
   border-radius: 12px;
   margin: 20px 10px;
 }
 
+.tabela p{
+  margin: 5px;
+} 
+
+
+/* ----Tabelas---- */
+.Tabelas h1{
+  text-align: center;
+}
+
+
+/* ----Table---- */
 .table{
   display: flex;
   flex-wrap: wrap;
-} 
-.Tabelas h1{
-  display: flex;
+  justify-content: left;
+}
+
+
+/* ----Cadastro---- */
+.cadastro button{
+  border: 3px solid dodgerblue;
+  background-color: rgba(255, 140, 0, 0.672);
+  width: 30%;
+}
+
+.cadastro input{
+  border: 2px solid dodgerblue;
 }
 
 .cadastro{
@@ -31,14 +56,17 @@
   margin: 10px 10px;
   background-color: rgba(255, 140, 0, 0.672);
 }
+
+.cadastro input{
+  margin: 5px;
+}
+
+
+/* ----Cadastro geral---- */
 .CadastroGeral{
 
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items:flex-start;
-}
-
-.cadastro input{
-  margin: 5px;
 }
